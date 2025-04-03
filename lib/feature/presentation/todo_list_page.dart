@@ -93,7 +93,8 @@ class _TodoPageState extends State<TodoPage> {
                             onPressed: () {
                               // Example of removing a todo
                               context.read<TodoListBloc>().add(
-                                RemoveTodoEvent(todo: _todos[index], todos: []),
+                                RemoveTodoEvent(todo: _todos[index], todos: _todos,
+                                ), ),
                               );
                             },
                           ),
